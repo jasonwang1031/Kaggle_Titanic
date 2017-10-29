@@ -1,5 +1,9 @@
 
-# coding: utf-8
+# Trying different graphs with matplotlib 
+# From graphs, we can see: 
+                        #1. Female Survival Rate are much higher than man
+                        #2. Fare price and Pclass are important
+                        #3. Children survival rate are really high
 
 # In[1]:
 
@@ -246,4 +250,26 @@ ax.legend(fontsize=12)
 
 
 train.isnull().sum()
+
+
+# more aggregated graph 
+
+# In[34]:
+
+
+train.hist(figsize=(15,15))
+
+
+# In[35]:
+
+
+train.plot(kind='density', subplots='True', sharex=False, figsize=(10,10))
+
+
+# In[36]:
+
+
+from pandas.plotting import scatter_matrix
+scatter_matrix(train, figsize=(10,10))
+
 

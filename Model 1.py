@@ -1,3 +1,4 @@
+# First Draft Model
 
 # coding: utf-8
 
@@ -11,7 +12,7 @@ import numpy as np
 # In[7]:
 
 
-train = pd.read_csv("C:/Users/ywang17/Desktop/kaggle/train.csv")
+train = pd.read_csv("train.csv")
 
 
 # In[10]:
@@ -84,7 +85,7 @@ cleaned_train.head()
 # In[92]:
 
 
-test = pd.read_csv("C:/Users/ywang17/Desktop/kaggle/test.csv")
+test = pd.read_csv("test.csv")
 tsex = pd.get_dummies(test['Sex'])
 test = pd.concat([test,tsex],axis =1)
 
